@@ -13,7 +13,7 @@ html, body {
 }
 
 .picture-frame {
-    width: 80%;
+    width: 100%;
     /* margin: 5px; */
     /* line-height: 0; */
     border: 2px solid cornflowerblue;
@@ -70,5 +70,16 @@ html, body {
     /* How to line up on cross axis */
     align-items: center;
     /* flex-wrap: wrap; */
+}
+
+/* it's like an if statement, but for CSS */
+@media screen and (min-width: 500px) {
+    body {
+        background: red;
+    }
+}@media screen and (min-width: 700px) {
+    body {
+        background: purple;
+    }
 }
 
