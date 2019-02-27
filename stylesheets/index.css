@@ -11,3 +11,64 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+.picture-frame {
+    width: 80%;
+    /* margin: 5px; */
+    /* line-height: 0; */
+    border: 2px solid cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* yes, but we're trying to break it */
+    /* display: inline-block; */
+    /* display: block; */
+    /* position: absolute; */
+    /* top: 150px; */
+}
+
+.picture-frame img {
+    width: 100%;
+}
+
+/* #one {
+    left: 0;
+    z-index: 10;
+    z-index set the order of stacking
+} */
+
+/* #two {
+    width: 200px;
+    left: 200px;
+    top: 200px;
+    z-index: 11; 
+} */
+
+/* #three {
+    width: 170px;
+    left: 80px;
+} */
+
+.hamster-playground {
+    /* position: absolute; */
+    /* top: 400px; */
+    /* left: 200px; */
+    /* background: cornflowerblue; */
+    /* position: relative; */
+    border: 5px solid gold;
+    display: flex;
+    /* If you set the height, that's how big the element will be. then the hamsters will overflow */
+    /* height: 300px; */
+    min-height: 300px;
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+    /* By default, flex-direction is in row */
+    /* flex-direction: column; */
+    /* How to line up on main axis */
+    justify-content: flex-start;
+    /* How to line up on cross axis */
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
