@@ -68,7 +68,7 @@ html, body {
     /* How to line up on main axis */
     justify-content: flex-start;
     /* How to line up on cross axis */
-    align-items: center;
+    /* align-items: center; */
     /* flex-wrap: wrap; */
 }
 
@@ -86,7 +86,7 @@ html, body {
     .hamster-playground {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 }
@@ -117,17 +117,6 @@ html, body {
 @media screen and (min-width: 1300px) {
     body {
         background: green;
-    }
-
-    .logo-text {
-        font-size: 40px;
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 1900px) {
-    body {
-        background: orange;
     }
 
     .logo-text {
