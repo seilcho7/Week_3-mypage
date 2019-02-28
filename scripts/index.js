@@ -15,8 +15,9 @@ function respondToClick(event) {
 
     console.log(event.target.parentElement);
     // Add the 'big' class to the thing that got clicked
-
-    event.target.parentElement.classList.add('big');
+    // event.target.parentElement.classList.toggle('big');
+    // event.target.parentElement.classList.add('big');
+    event.target.classList.toggle('big');
 }
 
 function attachClickHandler(oneElement) {

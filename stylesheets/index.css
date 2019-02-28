@@ -14,7 +14,7 @@ html, body {
 
 /* Use the :hover pseudo-class */
 .picture-frame:hover {
-    outline: 5px solid red;
+    outline: 3px solid red;
     /* width: 100%; */
     /* margin: 5px; */
     /* line-height: 0; */
@@ -35,14 +35,22 @@ html, body {
     transform: scale(1.10);
     opacity: 1.0;
 }
-
+/* state a */
 .picture-frame img {
+    outline: 5px bold blue;
     width: 100%;
-    padding: 15px;
+    padding: 10px 10px 5px 10px;
     opacity: 0.9;
+    transition: all .3s ease-in-out .3s;
+    /*  1. proterty names or the word 'all
+        2. duration in seconds or ms
+        3. timing functions
+        4. delay
+    */
 }
-
-.picture-frame.big img {
+/* state b */
+.picture-frame img.big {
+/* .picture-frame.big img { */
     transform: scale(2.5);
 }
 
@@ -64,11 +72,11 @@ html, body {
     left: 80px;
 } */
 .picture-frame {
-    outline: 2px solid green;
-
+    line-height: 0;
 }
 
 .hamster-playground {
+    line-height: 0;
     /* position: absolute; */
     /* top: 400px; */
     /* left: 200px; */
@@ -84,7 +92,7 @@ html, body {
     /* By default, flex-direction is in row */
     /* flex-direction: column; */
     /* How to line up on main axis */
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     /* align-content: flex-start; */
     /* How to line up on cross axis */
     /* align-items: center; */
