@@ -12,6 +12,23 @@ html, body {
     width: 100%;
 }
 
+@keyframes roller-coaster {
+    0% {
+        /* opacity: 0; */
+        transform: rotate(0);
+    }
+
+    50% {
+        /* opacity: 1.0; */
+        transform: rotate(270deg);
+    }
+
+    100% {
+        /* opacity: 0; */
+        transform: rotate(-90deg);
+    }
+}
+
 /* Use the :hover pseudo-class */
 .picture-frame:hover {
     outline: 3px solid red;
@@ -33,15 +50,15 @@ html, body {
 /* Scale the image up if the picture-frame is being hovered. */
 .picture-frame:hover img {
     transform: scale(1.10);
-    opacity: 1.0;
+    opacity: 0.2;
 }
 /* state a */
 .picture-frame img {
     outline: 5px bold blue;
     width: 100%;
     padding: 10px 10px 5px 10px;
-    opacity: 0.9;
-    transition: all .3s ease-in-out .3s;
+    opacity: 0.2;
+    /* transition: all .3s ease-in-out .3s; */
     /*  1. proterty names or the word 'all
         2. duration in seconds or ms
         3. timing functions
@@ -51,7 +68,10 @@ html, body {
 /* state b */
 .picture-frame img.big {
 /* .picture-frame.big img { */
-    transform: scale(2.5);
+    /* transform: scale(2.5); */
+    border-radius: 50%;
+    opacity: 1;
+    animation: roller-coaster 1s ease-in-out;
 }
 
 /* #one {
