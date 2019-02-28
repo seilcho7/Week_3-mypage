@@ -14,4 +14,9 @@ function respondToClick() {
     console.log('i am fine because i am a hamster.');
 }
 
-targetElements[0].addEventListener("click", respondToClick);
+function attachClickHandler(oneElement) {
+    // This is how we handle one element.
+    oneElement.addEventListener("click", respondToClick);   
+}
+
+targetElements.forEach(attachClickHandler)
