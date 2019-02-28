@@ -29,35 +29,39 @@ html, body {
     }
 }
 
+.logo-text {
+    color: black;
+    text-shadow: 1px 1px red;
+}
+
 /* Use the :hover pseudo-class */
-.picture-frame:hover {
-    outline: 3px solid red;
-    /* width: 100%; */
-    /* margin: 5px; */
-    /* line-height: 0; */
-    /* border: 2px solid cornflowerblue;
+/* .picture-frame:hover
+    width: 100%;
+    margin: 5px;
+    line-height: 0;
+    border: 2px solid cornflowerblue;
     display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     
-    /* yes, but we're trying to break it */
-    /* display: inline-block; */
-    /* display: block; */
-    /* position: absolute; */
-    /* top: 150px; */
-}
+    yes, but we're trying to break it
+    display: inline-block;
+    display: block;
+    position: absolute;
+    top: 150px;
+}*/
 
 /* Scale the image up if the picture-frame is being hovered. */
 .picture-frame:hover img {
-    transform: scale(1.10);
-    opacity: 0.2;
+    transform: scale(1.05);
+    opacity: 1.0;
 }
 /* state a */
 .picture-frame img {
-    outline: 5px bold blue;
     width: 100%;
-    padding: 10px 10px 5px 10px;
-    opacity: 0.2;
+    height: 100%;
+    opacity: 0.9;
+    border-radius: 20%
     /* transition: all .3s ease-in-out .3s; */
     /*  1. proterty names or the word 'all
         2. duration in seconds or ms
@@ -69,8 +73,8 @@ html, body {
 .picture-frame img.big {
 /* .picture-frame.big img { */
     /* transform: scale(2.5); */
-    border-radius: 50%;
-    opacity: 1;
+    /* border-radius: 20%; */
+    /* opacity: 1.0; */
     animation: roller-coaster 1s ease-in-out;
 }
 
@@ -92,21 +96,24 @@ html, body {
     left: 80px;
 } */
 .picture-frame {
-    line-height: 0;
+    /* line-height: 0; */
+    outline: 3px bold black;
+    margin: 10px 15px;
 }
 
 .hamster-playground {
-    line-height: 0;
+    padding: 10px 0;
+    /* line-height: 0; */
     /* position: absolute; */
     /* top: 400px; */
     /* left: 200px; */
     /* background: cornflowerblue; */
     /* position: relative; */
-    border: 5px solid gold;
+    border: 5px dotted black;
     display: flex;
     /* If you set the height, that's how big the element will be. then the hamsters will overflow */
     /* height: 300px; */
-    min-height: 300px;
+    /* min-height: 300px; */
     flex-direction: column;
     /* flex-direction: row-reverse; */
     /* By default, flex-direction is in row */
@@ -120,54 +127,30 @@ html, body {
 }
 
 /* it's like an if statement, but for CSS */
-@media screen and (min-width: 500px) {
-    body {
-        background: red;
-    }
-    
+
+@media screen and (min-width: 700px) {
+
     .picture-frame {
         width: 40%;
         margin: 20px 0;
-    }
-    
-    .hamster-playground {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media screen and (min-width: 700px) {
-    body {
-        background: purple;
-    }
-
-    .picture-frame {
-        width: 40%;
-        margin: 10px 0;
     }
 
     .hamster-playground {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .logo-text {
-        font-size: 32px;
+        font-size: 40px;
         text-align: center;
     }
 }
 
 @media screen and (min-width: 1300px) {
-    body {
-        background: green;
-    }
-
     .logo-text {
-        font-size: 40px;
+        font-size: 45px;
         text-align: center;
     }
 }
