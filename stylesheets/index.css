@@ -12,7 +12,7 @@ html, body {
     width: 100%;
 }
 
-@keyframes roller-coaster {
+@keyframes pop-tilt {
     0% {
         /* opacity: 0; */
         transform: rotate(0);
@@ -20,18 +20,26 @@ html, body {
 
     50% {
         /* opacity: 1.0; */
-        transform: rotate(270deg);
+        transform: rotate(360deg);
+        /* transform: rotate(120deg); */
     }
 
     100% {
         /* opacity: 0; */
-        transform: rotate(-90deg);
+        /* transform: rotate(-90deg); */
+        transform: rotate(-360deg);
     }
 }
 
 .logo-text {
     color: black;
     text-shadow: 1px 1px red;
+    margin-left: 15px;
+}
+
+.picture-frame p {
+    text-align: center;
+    font-size: 20px;
 }
 
 /* Use the :hover pseudo-class */
@@ -53,7 +61,7 @@ html, body {
 
 /* Scale the image up if the picture-frame is being hovered. */
 .picture-frame:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
     opacity: 1.0;
 }
 /* state a */
@@ -61,21 +69,37 @@ html, body {
     width: 100%;
     height: 100%;
     opacity: 0.9;
-    border-radius: 20%
-    /* transition: all .3s ease-in-out .3s; */
-    /*  1. proterty names or the word 'all
+    border-radius: 20%;
+    transition: all .3s ease-in-out .3s;
+    /*  1. property names or the word 'all'
         2. duration in seconds or ms
         3. timing functions
         4. delay
     */
 }
+
 /* state b */
-.picture-frame img.big {
+.picture-frame.big img {
 /* .picture-frame.big img { */
-    /* transform: scale(2.5); */
+    transform: scale(1.4);
     /* border-radius: 20%; */
     /* opacity: 1.0; */
-    animation: roller-coaster 1s ease-in-out;
+    animation: pop-tilt 1s ease-in-out;
+}
+.picture-frame p {
+    /* background-color: black; */
+    color: black;
+    opacity: 0.8;
+    transition: transform 0.5s ease-in-out, opacity 1s linear, color 1s step-start;
+    /* transition: color .2s ease-in-out; */
+
+}
+.picture-frame.big p {
+    /* color: bl ue; */
+    transform: scale(2.0);
+    opacity: 1.0;
+    color: red;
+    text-shadow: white 1px 1px;
 }
 
 /* #one {
@@ -96,13 +120,14 @@ html, body {
     left: 80px;
 } */
 .picture-frame {
-    /* line-height: 0; */
-    outline: 3px bold black;
+    /* outline: 3px solid black; */
     margin: 10px 15px;
 }
 
 .hamster-playground {
+    min-width: 185px;
     padding: 10px 0;
+    margin: 15px;
     /* line-height: 0; */
     /* position: absolute; */
     /* top: 400px; */
