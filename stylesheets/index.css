@@ -31,6 +31,20 @@ html, body {
     }
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: block;
+}
+
+.nav.big ul{
+    display: none;
+}
+
 .logo-text {
     color: black;
     text-shadow: 1px 1px red;
@@ -70,7 +84,7 @@ html, body {
     height: 100%;
     opacity: 0.9;
     border-radius: 20%;
-    transition: all .3s ease-in-out .3s;
+    /* transition: all 0.3s ease-in-out 0.3s; */
     /*  1. property names or the word 'all'
         2. duration in seconds or ms
         3. timing functions
@@ -125,9 +139,9 @@ html, body {
 }
 
 .hamster-playground {
-    min-width: 185px;
     padding: 10px 0;
     margin: 15px;
+    width: 80%;
     /* line-height: 0; */
     /* position: absolute; */
     /* top: 400px; */
